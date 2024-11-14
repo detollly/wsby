@@ -1,8 +1,8 @@
 
 @font-face { 
     font-family: 'MyCustomFont'; 
-    src: url('fonts/mycustomfont.woff2') format('woff2'), 
-         url('fonts/mycustomfont.woff') format('woff'); 
+    src: url('/assets/fonts/font.woff') format('woff'), 
+         url('/assets/fonts/font.woff2') format('woff2'); 
          font-weight: normal; 
          font-style: normal; } 
          

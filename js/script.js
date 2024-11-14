@@ -24,5 +24,5 @@ function changeBackground() {
 } 
     
     
-    setInterval(changeBackground, 30000); 
-    window.onload = changeBackground;
+    setInterval(changeBackground, 5000); 
+    window.onload= changeBackground;
