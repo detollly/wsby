@@ -1,17 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
 
 @font-face { 
     font-family: 'MyCustomFont'; 
-    src: url('/assets/fonts/font.woff') format('woff'), 
-         url('/assets/fonts/font.woff2') format('woff2'); 
+    src: url('/assets/fonts/font.woff') format('woff'),
+         url('/assets/fonts/font.woff2') format('woff2');  
          font-weight: normal; 
-         font-style: normal; } 
+         font-style: normal; 
+} 
          
 body, html{ 
     margin: 0;
     padding: 0;
+    width: 100%;
     height: 100%;
     overflow: hidden;
-    font-family: 'MyCustomFont', 
+    font-family: 'MyCustomFont';
+    color: #FFFFFF;
+    font-size: 24px;
 }
 
 .background-container {
@@ -23,4 +31,108 @@ body, html{
     background-size: cover;
     background-position: center;
     transition: background-image 10s ease-in-out;
+}
+
+header { 
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10dvh;
+    background: transparent;
+}
+
+.logo-icon {
+    margin-left: 0.9rem;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+}
+
+/* Hamburger menu */
+.input-toggler {
+    display: none;
+}
+
+.menu-toggler {
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    width: 30px;
+    height: 25px;
+    z-index: 1001;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggler span {
+    display: block;
+    width: 1.6rem;
+    height: 2px;
+    background: #FFFFFF;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Transform toggler lines to an "X" when active */
+.input-toggler:checked + .menu-toggler span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.input-toggler:checked + .menu-toggler span:nth-child(2) {
+    opacity: 0;
+}
+
+.input-toggler:checked + .menu-toggler span:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+/* Overlay menu styles */
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Show overlay menu when toggler is checked */
+.input-toggler:checked ~ .overlay-menu {
+    display: flex;
+}
+
+/* Navigation styles */
+.nav ul {
+    text-align: center;
+}
+
+.nav ul li {
+    margin: 20px 0;
+    list-style: none;
+}
+
+.nav ul li a {
+    color: #fff;
+    font-size: 2em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer { 
+    position: fixed; 
+    width: 50%; 
+    height: 12dvh;
+    bottom: 0; 
+    left: 0; 
+    background: transparent;
+    padding: 0 0 20px 30px; 
+    text-align: start;
 }

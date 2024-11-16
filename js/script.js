@@ -1,3 +1,5 @@
+/* Home page background slide show */
+
 const images = [
     'url("/assets/img/Untitled-3.jpg")',
     'url("/assets/img/Untitled-4.jpg")',
@@ -24,5 +26,20 @@ function changeBackground() {
 } 
     
     
-    setInterval(changeBackground, 5000); 
+    setInterval(changeBackground, 10000); 
     window.onload= changeBackground;
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* Hamburger menu*/
+
+/*
+function toggleMenu() { 
+    var menuLinks = document.getElementById('menu-links'); 
+    var hamburgerContainer = document.querySelector('.hamburger-container'); 
+    
+    menuLinks.classList.toggle('active'); hamburgerContainer.classList.toggle('active'); 
+}
+
+*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
