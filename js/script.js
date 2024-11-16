@@ -31,15 +31,7 @@ function changeBackground() {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-/* Hamburger menu*/
 
-/*
-function toggleMenu() { 
-    var menuLinks = document.getElementById('menu-links'); 
-    var hamburgerContainer = document.querySelector('.hamburger-container'); 
-    
-    menuLinks.classList.toggle('active'); hamburgerContainer.classList.toggle('active'); 
-}
 
-*/
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
