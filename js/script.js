@@ -23,15 +23,44 @@ function changeBackground() {
     const container = document.querySelector('.background-container'); 
     container.style.backgroundImage = images[currentIndex]; 
     currentIndex = (currentIndex + 1) % images.length; 
+    container.style.backgroundImage = images[currentIndex];
 } 
     
-    
-    setInterval(changeBackground, 10000); 
-    window.onload= changeBackground;
+setInterval(changeBackground, 10000); 
+window.onload= function() {
+    changeBackground(currentIndex);
+};
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+/* Arrow cursor image switching */
 
+function nextImage() { 
+    changeBackground(currentIndex + 1); 
+} 
+
+function prevImage() { 
+    changeBackground(currentIndex - 1); 
+} 
+
+document.addEventListener('mousemove', function(event) {
+    const width = window.innerWidth;
+    if (event.clientX < width / 2) {
+        document.body.classList.add('left-cursor');
+        document.body.classList.remove('right-cursor');
+    } else {
+        document.body.classList.add('right-cursor');
+        document.body.classList.remove('left-cursor');
+    }
+});
+
+document.addEventListener('click', function(event) {
+    const width = window.innerWidth;
+    if (event.clientX < width / 2) {
+        prevImage();
+    } else {
+        nextImage();
+    }
+});
 
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
